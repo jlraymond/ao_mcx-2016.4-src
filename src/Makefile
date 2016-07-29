@@ -24,7 +24,7 @@ ifeq ($(BACKEND),ocelot)
   LINKOPT=-L/usr/local/lib `OcelotConfig -l`
   CUCCOPT=-g -arch=sm_20 #--maxrregcount 32
 else
-  LINKOPT=-L$(CUDA_HOME)/lib64 -lcudart -lm
+  LINKOPT=-L$(CUDA_HOME)/lib64 -lcudart -lm -lstdc++
   CUCCOPT=-lineinfo -Xcompiler -Wall#-g #-arch compute_20 #--maxrregcount 32
 endif
 
