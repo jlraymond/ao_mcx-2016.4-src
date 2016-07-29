@@ -1,0 +1,158 @@
+= Change Log =
+
+== MCX v2016.4 (Dark Matter - 1.0-beta), FangQ <q.fang (a) neu.edu> ==
+
+ 2016-04-21 [release] finalize and release v2016.04
+ 2016-04-21*[2b1f22a] add Visual Studio 2013 Nsight project for easy compilation on windows
+ 2016-04-19 [3b69a1a] fix thread hanging bug when running on multiple GPUs
+ 2016-04-15*[e71f4c7] kick-off "MCX GPU Contest" for user-contributed hardware benchmarking
+ 2016-04-06 [c52b470] fix photon detection bug, fix json file crash, fix workload distribution bug, fix hitgrid inf handeling, fix energytot bug
+ 2016-04-05*[e94087f] add benchmark folder, announce "MCX Speed Challenge"
+ 2016-03-28 [76f9c5a] reduce memory dependency, yielded a 42% increase in mcx speed for the quicktest benchmark
+ 2016-03-26*[b14ccf1] simplify RNG interface, two new RNGs: POSIX erand48 and xorshift128+, retiring MT RNG
+ 2016-02-28 [29ea426] speed up ray tracer with customized nextafterf function and reciprocal of c
+ 2015-11-09 [1491f4e] Determining block size in autopilot mode using max block per SMX, by Fanny Nina Paravecino
+ 2015-11-08 [48dfb33] fix refractive index mismatch transmission bug
+ 2015-09-28*[73dd850] add uniform line source and slit source, suggested by Yu Chen
+ 2015-09-12 [9da817e] fix bug for wide field sources
+ 2015-09-11*[c7f9625] make precise ray-tracing default to improve accuracy
+ 2015-09-11 [a1e781a] update affiliation, Qianqian now moved to Northeastern
+ 2015-07-12 [3898b14] add nsight project files
+ 2015-07-27 [cd8f134] use proper epsilon for float roundoff tests
+ 2015-06-25 [6815577] fix address alignment error for CUDA 6 or higher
+ 2015-06-25*[60238c4] multiple GPU support!
+ 2015-06-25*[60238c4] set atomic as default, single binary now contains all features
+ 2015-06-15 [97cd3e9] return gpu info for better interfacing with matlab
+ 2015-06-10*[7487e4d] support saving photon seeds and replay
+ 2015-06-10 [3c8a116] accept endianness input
+ 2015-05-01 [funding] NIH/NIGMS R01 funding support starts
+
+== MCX 0.9.7-2 (Dark Matter - alpha update 2), FangQ <fangq (a) nmr.mgh.harvard.edu> ==
+
+ 2014-09-23 [r325] fix submillimeter voxel scaling bug in the binary mode; fix total simulated photon count
+ 2014-07-11 [r324] a patch submitted by David Gasperino for rigirously modeling a collimated Gaussian beam
+ 2014-07-11 [r323] high priority bug fixes submitted by Kim Shultz: transmission angle and oddphoton handling
+ 2014-01-19 [r322] saving detected photon seed for fast replay and pMC analysis
+
+== MCX 0.9.7-1 (Dark Matter - alpha update 1), FangQ <fangq (a) nmr.mgh.harvard.edu> ==
+
+ 2013-10-22 [r320] fix isotropic scattering bug at g=0, a critical bug fix
+
+== MCX 0.9.7 (Dark Matter - alpha), FangQ <fangq (a) nmr.mgh.harvard.edu> ==
+
+ 2013-09-16 [r306] MCXLAB srctype demo script
+ 2013-09-15*[r305-308] wide-field source support, including 9 source types
+ 2013-09-11 [r305] random number generator performance optimization
+ 2013-08-29 [r304] loadmch supports the seed data from the latest MMC simulations
+ 2013-02-11 [r300-302] fix double correction for unitinmm
+
+== MCX 0.8.0 (Charm Quarks - final), FangQ <fangq (a) nmr.mgh.harvard.edu> ==
+
+ 2012-08-24 [r297] merge all variants into a single binary for Fermi cards (make fermi)
+ 2012-08-21 [r296] fix Bug/0005, incorrect returned field and normalization for multiple gate groups (reported by Vivian Pera)
+ 2012-08-21 [r295] fix Bug/0004. incorrect detected photon buffer pointer in MCXLAB with respin>1 (Vivian Pera)
+ 2012-08-08 [r291-294] fix Bug/0001, forward scattering bias with automatic reseeding of the RNG (Matt Adams,Okito Yamashita)
+ 2012-08-08 [r290] backport features from MMCLAB: exception handling and print inside matlab
+ 2012-07-25 [r287] fix Bug/0002-2, conflict between savedet and share memory cache (Okito Yamashita)
+ 2012-07-21 [r286] change default MAX_DETECTORS from 256 t0 1024
+ 2012-07-13 [r282] fix Bug/0002. use srcfrom0 flag to set crop0 and crop1 in mcx_cached (Okito Yamashita)
+ 2012-07-06 [r280] calculate exact exit point when savedet is true (suggested by Audrey Steever)
+ 2012-07-04 [r276] fix MP core count bug (patch by Suresh Paidi)
+
+== MCX 0.7.9 (Charm Quarks - beta), FangQ <fangq (a) nmr.mgh.harvard.edu> ==
+
+ 2012-01-10 fix a regression introduced in 0.5.3 for accurate exit positions
+ 2012-01-08 support 3D shape input and and run-time rasterization
+ 2012-01-07 port JSON-formatted input file support from MMC to MCX
+
+== MCX 0.5.3 (Black Hole - update 3), FangQ <fangq (a) nmr.mgh.harvard.edu> ==
+
+ 2012-01-07 fix a minor bug which fails using -1 with -E
+ 2011-12-21 fix an issue causing forward scattering bias (reported by David Giraud)
+
+== MCX 0.5.2 (Black Hole - update 2), FangQ <fangq (a) nmr.mgh.harvard.edu> ==
+
+ 2011-09-21 fix a regression in MCXLAB related to detectors, use exact exit position for radius test
+ 2011-09-20 add verbose warnings for launch-time-out error and non-surface detectors
+ 2011-09-19 users can specify srcfrom0 (origin setting) from the input file
+ 2011-09-19 fix a bug in detector-to-volume mapping, effects all non-integer inputs
+
+== MCX 0.5.1 (Black Hole - update 1), FangQ <fangq (a) nmr.mgh.harvard.edu> ==
+
+ 2011-05-03 use the expected absorption for normalization to reduce non-atomic impact
+ 2011-04-26 fix a serious shared-mem buffer length bug (can cause crash)
+ 2011-04-26 MCXLAB now accepts crop0/crop1 fields to specify shared-mem region
+ 2011-03-25 new GPU-ocelot compilation flag
+
+== MCX 0.5.0 (Black Hole), FangQ <fangq (a) nmr.mgh.harvard.edu> ==
+
+ 2011-03-18 update documents, get ready to release 0.5.0
+ 2011-03-18 gracefully handle exceptions in MCXLAB
+ 2011-03-17 add validation scripts for MCXLAB/MCX, fix a bug for saving flux
+ 2011-03-16 add MCXLAB example scripts
+ 2011-03-15 extensive debugging with the --unitinmm flag
+ 2011-03-09 MCXLAB now returns flux and detected photon in Matlab and Octave
+ 2011-03-03 add -E to seed RNG from command line
+ 2010-12-28 use negative -R to enable cachebox defined in the input file, fix time wraping
+ 2010-08-08 debug make mex option for Linux
+ 2010-08-09 first import of MCXLAB - MCX for Matlab and Octave
+ 2010-08-08 debug and test --unitinmm flag
+ 2010-08-05 initial support for reflection at internal boundaries
+ 2010-08-05 estimate maxgate when using the autopilot mode
+ 2010-08-02 fix a bug when saving multiple blocks of mch
+
+== MCX 0.4.9 (Black Hole-beta), FangQ <fangq (a) nmr.mgh.harvard.edu> ==
+
+ 2010-08-01 update documentation and release v0.5 beta (aka 0.4.9)
+ 2010-08-01 fix a critical bug for pre-Fermi cards,validated MCX on CC11,13,20
+ 2010-07-31 enable -n for photon number, disable -m, report simulation speed
+ 2010-07-30 fix a bug when reading medium index with detector mask
+ 2010-07-29 use atomic with shared memory cache to improve accuracy near the source
+ 2010-07-28 add example for validation of MCX in heterogeneous media
+ 2010-07-28 use RNG for transmission/reflection test
+ 2010-07-28 use column major as the internal array format
+ 2010-07-27 support saving detected photons, but got 25% slower
+ 2010-07-15 users can use -u to specify voxel edge length in mm
+ 2010-07-12 fix a bug for indexing error in large volumes
+ 2010-07-09 fix a bug when appending data for multiple time gate groups
+ 2010-06-26 use constant memory to pass kernel param, more error info
+ 2010-06-26 use meaningful struct in the kernel to improve readability
+ 2010-05-14 allow to select which GPU to use with the -G option
+ 2010-02-04 fix a minor NaN bug detected by GPU Ocelot
+ 2010-01-26 add GPU Ocelot makefile for multicore CPU
+
+== MCX 0.2 (Aurora), FangQ <fangq (a) nmr.mgh.harvard.edu> ==
+
+ 2009-12-19 polish documentation, add svn keywords and tagged 0.2 final
+ 2009-12-10 MCX Studio GUI is tested on Linux, Windows, Mac OS X
+ 2009-12-03 add README.txt file for each example folder
+ 2009-12-02 complete "bubble" mode to reduce impact from non-atomic write
+ 2009-10-24 use cuda event timer, use VC compiler for Windows
+ 2009-10-21 paper published online, added windows support
+ 2009-10-20 set license to GPLv3, first public release (v0.2 beta)
+ 2009-10-19 fixed double-precision warning for CUDA 2.3
+ 2009-10-06 more GUI developments
+ 2009-09-25 fixed memory leakage, supported verbose options
+ 2009-09-24 major code clean-up, added GPUDEBUG macro
+ 2009-07-31 tested on GTX295 with CUDA 2.3
+ 2009-07-15 used atomicFloatAdd for atomic memory write
+ 2009-07-13 fixed half-grid shift bug in the validation script
+ 2009-07-08 reflection for a maximum of 3 interfaces
+ 2009-06-26 tested non-atomic write racing condition
+ 2009-05-19 added mcx studio: a GUI for mcx
+ 2009-05-07 query GPU info
+ 2009-05-05 added options to print to a log file
+ 2009-04-30 code clean up and paper submission, tag 0.1.9 (Aurora alpha)
+ 2009-04-26 new and more robust boundary reflection code
+ 2009-04-24 build-in fluence normalization (unitary solution)
+ 2009-04-20 added examples and validation scripts, supported respins
+ 2009-04-07 energy conservation for normalization of the solution
+ 2009-04-03 time gating support
+ 2009-04-01 split the main function to units, add utils. and config file
+ 2009-03-02 added logistic-map based random number generator
+ 2009-02-27 early support of boundary reflection
+ 2009-02-24 MT rand now working fine
+ 2009-02-21 added MT random number generator initial version
+ 2009-02-20 translated to Brook+
+ 2009-02-15 translated to CUDA
+ 2009-02-14 initial version written in BrookGPU
